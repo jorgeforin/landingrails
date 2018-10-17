@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+  <head>
+  
+
+
+<title>Teusapp Movilidad Sostenible en la Localidad de Teusaquillo</title>
+
+
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+    
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Multi-purpose Business html5 landing page">
+  <link href="../../assets/logo/favicon.ico" rel="icon">
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700' rel='stylesheet' type='text/css'>
+
+  
+  <link href="../../assets/external.css" rel="stylesheet">
+  <link href="../../assets/bootstrap.min.css" rel="stylesheet">
+  <link href="../../assets/style.css" rel="stylesheet">
+  
+  
+  
+   
+</head>
+  <body class="body-scroll">
+    <%= render 'layouts/header'%>
+    <div>
+    <% if false %>
+    <%= link_to "Nosotros", about_path%>
+    <%= link_to "Inicio", root_path%>
+    <% end %>
+    <% flash.each do |name, msg|%>
+    <%= content_tag(:div, msg, class: "alert alert-info")%>
+    <% end %> 
+    <%= yield %>
+    
+  
+    </div>
+    
+
+     <script src="../../assets/jquery-2.2.4.min.js"></script>
+    <script src="../../assets/plugins.js"></script>
+  <script src="../../assets/functions.js"></script>
+ 
+
+  </body>
+  
+  
+</html>
