@@ -53,7 +53,7 @@ group :development, :test do
  # gem 'capybara', '~> 2.13'
  # gem 'selenium-webdriver'
 
- gem 'web-console' , '~> 2.0'
+ gem 'web-console' , '~> 2.0'  , group: :development
 
  gem 'spring'
  gem 'dotenv-rails'
