@@ -1,7 +1,5 @@
 source 'https://rubygems.org'
 
-
-
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
@@ -40,6 +38,21 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 #autenticacion on rails
 gem 'devise', '~> 4.5'
 
+group :development, :test do
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  # Adds support for Capybara system testing and selenium driver
+ # gem 'capybara', '~> 2.13'
+ # gem 'selenium-webdriver'
+
+ gem 'web-console' , '~> 2.0'
+
+ gem 'spring'
+ gem 'dotenv-rails'
+
+ gem 'sqlite3'
+
+end
 
 group :production do
   gem 'pg'
@@ -48,21 +61,6 @@ end
   
 
 
-group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  # Adds support for Capybara system testing and selenium driver
- # gem 'capybara', '~> 2.13'
- # gem 'selenium-webdriver'
 
- gem 'web-console' , '~> 2.0'  , group: :development
-
- gem 'spring'
- gem 'dotenv-rails'
-
- gem 'sqlite3'
-
- # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-end
